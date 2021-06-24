@@ -7,7 +7,7 @@ resource "aws_instance" "MyWebserver" {
   ami           = "ami-010aff33ed5991201"
   instance_type = "t2.micro"
   security_groups = ["allow-All"]
-  key_name = "awsAprilPPK"
+  key_name = "awsJuneKey"
   tags = {
     Name = "my web server"
   }
