@@ -1,0 +1,37 @@
+<html>
+<head>
+<title> Run Docker </title>
+<body style="background-color:#C0C0C0;">
+</head>
+<body>
+
+<script>
+        function lw() {
+                var i = document.getElementById("in1").value
+                var xhr = new XMLHttpRequest();
+               
+                xhr.open("GET", "http://192.168.99.103/cgi-bin/command.py?x=" + i, true);
+                xhr.send();
+
+		xhr.onload = function() {
+                        var output = xhr.responseText;
+                        document.getElementById("out").innerHTML = output;
+                }
+}
+</script>
+		
+<center style="font-size: 40px; color: #010101;">Command Prompt Appplication...
+<br>
+<b  style="font-size: 30px; color: yellow;"> Pass Your Commands..!<b>
+<br>
+</center>
+<br>
+<b style= "font-size: 20px; color: blue;margin-top:50px;">[root@192.168.99.103~]#  <input id="in1" style="font-size: 15px; color:#7D1D1D; padding: 5px; width: 400px" /><b>
+<br/>
+<pre>
+<center style= "font-size: 20px; color: black;"><div id="out"> Output Here... </div><center>
+</pre>
+
+<center><button onclick="lw()" style="font-size: 25px;" > RUN </button><center>
+</body>	
+<html>
